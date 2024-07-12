@@ -1,0 +1,20 @@
+.footer-name {
+  background-color: #ed1c24;
+  height: 100%;
+  padding: 20px;
+  margin-top: 0px;
+}
+
+#footer-red {
+  text-align: center;
+}
+
+.footer-address {
+  text-align: center;
+  padding: 20px 0 0 100px;
+  /* color: #ed1c24; */
+}
+
+.footer-rescue-name {
+  color: #ed1c24;
+}

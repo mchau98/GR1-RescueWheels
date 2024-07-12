@@ -1,0 +1,9 @@
+@media screen and (max-width: 430px) {
+  .body {
+    margin-top: 80px !important;
+  }
+}
+
+.container {
+  background-color: #f4f5f7;
+}
