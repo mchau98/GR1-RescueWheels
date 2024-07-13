@@ -15,7 +15,7 @@ function Landing() {
         <img
           src={poster}
           alt="posters"
-          style={{ width: "1450px", height: "544px" }}
+          style={{ width: "1440px", height: "544px" }}
         />
       </div>
     </div>

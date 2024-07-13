@@ -1,3 +1,41 @@
 .home-container {
   margin-top: 180px;
 }
+
+.home-introduce {
+  margin-top: 100px;
+  padding: 0 100px 100px 100px;
+  display: flex;
+}
+
+.home-intro-img {
+  flex: 1;
+  margin-left: 50px;
+}
+
+.home-intro-text {
+  flex: 1;
+  font-size: 16px;
+  margin-right: 50px;
+}
+
+#intro-name {
+  text-align: center;
+  color: #ed1c4e;
+}
+
+.home-button-call {
+  background-color: #ed1c24;
+  margin-top: 30px;
+  font-size: 16px;
+  /* font-weight: bold; */
+  font-family: sans-serif;
+  padding: 20px;
+  margin-left: 170px;
+}
+
+.home-button-call:hover {
+  background-color: #e6787c !important; /* Màu nền khi hover */
+  color: white; /* Màu chữ khi hover */
+  opacity: 0.9; /* Giảm độ mờ khi hover */
+}
