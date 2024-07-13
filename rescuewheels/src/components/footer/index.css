@@ -10,9 +10,14 @@
 }
 
 .footer-address {
-  text-align: center;
+  margin-left: 200px;
+  text-align: left;
   padding: 20px 0 0 100px;
   /* color: #ed1c24; */
+}
+
+.first-name {
+  color: #ed1c24;
 }
 
 .footer-rescue-name {

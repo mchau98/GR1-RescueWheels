@@ -77,9 +77,11 @@ function Header(props) {
           className="header-img"
           style={{ width: "267px", height: "96px" }}
         />
-        <Button className="header-button" type="primary">
-          GỌI CỨU HỘ NGAY
-        </Button>
+        <a href="tel:0972088534">
+          <Button className="header-button" type="primary">
+            GỌI CỨU HỘ NGAY
+          </Button>
+        </a>
       </div>
     </div>
   );

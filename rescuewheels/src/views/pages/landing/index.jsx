@@ -10,15 +10,13 @@ function Landing() {
     },
   ]);
   return (
-    <div>
-      <div className="landing-container">
-        <div className="landing-poster">
-          <img
-            src={poster}
-            alt="posters"
-            style={{ width: "1450px", height: "544px" }}
-          />
-        </div>
+    <div className="landing-container">
+      <div className="landing-poster">
+        <img
+          src={poster}
+          alt="posters"
+          style={{ width: "1450px", height: "544px" }}
+        />
       </div>
     </div>
   );
