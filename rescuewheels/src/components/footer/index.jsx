@@ -21,6 +21,24 @@ function Footer() {
       hotline: "0335869862",
       time: "24/24",
     },
+    {
+      name: "CỨU HỘ XE MÁY HOÀNG MAI",
+      address: "110 Tân Mai, Hoàng Mai",
+      hotline: "0335869862",
+      time: "24/24",
+    },
+    {
+      name: "CỨU HỘ XE MÁY LONG BIÊN",
+      address: "501 Cổ Linh, Long Biên",
+      hotline: "0335869862",
+      time: "24/24",
+    },
+    {
+      name: "CỨU HỘ XE MÁY HÀ ĐÔNG",
+      address: "10 Trần Phú, Hà Đông",
+      hotline: "0335869862",
+      time: "24/24",
+    },
   ];
   return (
     <div className="footer-container">
@@ -34,7 +52,7 @@ function Footer() {
         </h5>
       </div>
       <div className="footer-address">
-        <Row
+        {/* <Row
           gutter={{
             xs: 8,
             sm: 16,
@@ -45,7 +63,7 @@ function Footer() {
           {data.map((item, index) => (
             <Col className="gutter-row" span={6} key={index}>
               <div className="first-name">
-                <h4>{item.name}</h4>
+                <h5>{item.name}</h5>
               </div>
               <div>
                 <p>ĐC: {item.address}</p>
@@ -66,7 +84,29 @@ function Footer() {
           {data.map((item, index) => (
             <Col className="gutter-row" span={6} key={index}>
               <div className="first-name">
-                <h4>{item.name}</h4>
+                <h5>{item.name}</h5>
+              </div>
+              <div>
+                <p>ĐC: {item.address}</p>
+                <p>Hotline: {item.hotline}</p>
+                <p>Giờ làm việc: {item.time}</p>
+              </div>
+            </Col>
+          ))}
+        </Row> */}
+        <Row gutter={[16, 16]}>
+          {data.map((item, index) => (
+            <Col
+              key={index}
+              xs={24}
+              sm={12}
+              md={8}
+              lg={8}
+              xl={8}
+              className="gutter-row"
+            >
+              <div className="first-name">
+                <h5>{item.name}</h5>
               </div>
               <div>
                 <p>ĐC: {item.address}</p>

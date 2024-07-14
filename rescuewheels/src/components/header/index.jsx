@@ -4,17 +4,20 @@ import { useState } from "react";
 import { Button } from "antd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faUserPlus, faBell } from "@fortawesome/free-solid-svg-icons";
+
 function Header(props) {
   const [active, setActive] = useState("");
+  const [showSubbar, setShowSubbar] = useState(false); // State quản lý subbar
   const user = localStorage.getItem("username");
   const location = useLocation();
   const navigate = useNavigate();
+
   return (
     <div className="header-container">
-      <div class="header-tab">
+      <div className="header-tab">
         {!user ? (
           <>
-            <button class="header-register">
+            <button className="header-register">
               <Link
                 className={`header-link ${
                   active === "register" ? "header-active" : ""
@@ -27,7 +30,7 @@ function Header(props) {
               </Link>
             </button>
 
-            <button class="header-login">
+            <button className="header-login">
               <Link
                 className={`header-link ${
                   active === "login" ? "header-active" : ""
@@ -42,41 +45,46 @@ function Header(props) {
           </>
         ) : (
           <>
-            <button class="header-register">
-              {/* <Link
-                to="/activity-list"
-                className={`header-link ${
-                  active === "activity" ? "header-active" : ""
-                }`}
-                onClick={() => setActive("activity")}
-              > */}
+            <button className="header-register">
               <FontAwesomeIcon className="header-icon" icon={faBell} />
               Thông báo
-              {/* </Link> */}
             </button>
 
-            <button class="header-login">
-              <Link
-                className={`header-link ${
-                  active === "target" ? "header-active" : ""
-                }`}
-                onClick={() => setActive("target")}
-                to="/define-goal"
-              >
-                <FontAwesomeIcon className="header-icon" icon={faUser} />
-                Tài khoản
-              </Link>
+            <button
+              className="header-login"
+              onClick={() => setShowSubbar(!showSubbar)}
+            >
+              <FontAwesomeIcon className="header-icon" icon={faUser} />
+              Tài khoản
             </button>
+            {showSubbar && (
+              <div className="subbar">
+                <Link to="/update-info" className="subbar-link">
+                  Thông tin cá nhân
+                </Link>
+                <a
+                  href="/"
+                  className="subbar-link"
+                  onClick={() => {
+                    localStorage.removeItem("username");
+                  }}
+                >
+                  Đăng xuất
+                </a>
+              </div>
+            )}
           </>
         )}
       </div>
       <div className="header-call">
-        <img
-          src="/logo.jpg"
-          alt="Logo"
-          className="header-img"
-          style={{ width: "267px", height: "96px" }}
-        />
+        <Link to="/home" onClick={() => setActive("")}>
+          <img
+            src="/logo.jpg"
+            alt="Logo"
+            className="header-img"
+            style={{ width: "267px", height: "96px" }}
+          />
+        </Link>
         <a href="tel:0972088534">
           <Button className="header-button" type="primary">
             GỌI CỨU HỘ NGAY

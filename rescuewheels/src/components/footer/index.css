@@ -1,3 +1,7 @@
+.footer-container {
+  margin-top: 50px;
+}
+
 .footer-name {
   background-color: #ed1c24;
   height: 100%;
@@ -10,7 +14,7 @@
 }
 
 .footer-address {
-  margin-left: 200px;
+  margin-left: 80px;
   text-align: left;
   padding: 20px 0 0 100px;
   /* color: #ed1c24; */
