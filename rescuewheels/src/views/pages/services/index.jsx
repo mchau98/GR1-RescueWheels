@@ -1,4 +1,5 @@
 import "./index.css";
+import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import { Input, Select, Card } from "antd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -17,6 +18,7 @@ import {
 function Services() {
   const { Option } = Select;
   const { Meta } = Card;
+  const navigate = useNavigate();
 
   // Initial state for services
   const [services, setServices] = useState([
@@ -164,6 +166,10 @@ function Services() {
     return true;
   });
 
+  const handleServiceClick = (service) => {
+    navigate(`/service/${service.id}`, { state: { service } });
+  };
+
   return (
     <div className="service-container">
       {/* Filter section */}
@@ -204,7 +210,7 @@ function Services() {
           </Select>
         </div>
         <div className="service-box">
-          <CarOutlined className="service-icon" />
+          <DollarOutlined className="service-icon" />
           <Select
             defaultValue="all"
             className="service-select"
@@ -222,7 +228,12 @@ function Services() {
       {/* Service cards section */}
       <div className="service-grid-container">
         {filteredServices.map((service) => (
-          <Card key={service.id} hoverable className="service-card">
+          <Card
+            key={service.id}
+            hoverable
+            className="service-card"
+            onClick={() => handleServiceClick(service)}
+          >
             <div className="service-card-body">
               <h4 className="service-card-title">{service.name}</h4>
               <p className="service-card-price">

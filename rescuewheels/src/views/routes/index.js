@@ -1,5 +1,5 @@
 import Home from "../pages/home";
-import { Navigate, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Landing from "../pages/landing";
 import MainLayout from "../../components/main_layout";
 import Register from "../pages/register";
@@ -9,10 +9,14 @@ import ForgotPassword from "../pages/forgot-password";
 import Navbar from "../../components/navbar";
 import SettingAccount from "../pages/account";
 import Services from "../pages/services";
+import Sidebar from "../../components/sidebar";
+import UsedService from "../pages/used-services";
+import ServiceDetail from "../pages/servicedetail";
 function AllRoutes() {
   return (
     <Routes>
       <Route path="/navbar" element={<Navbar />} />
+      <Route path="/sidebar" element={<Sidebar />} />
       <Route path="/home" element={<LayoutLogin component={<Home />} />} />
       <Route path="/" element={<MainLayout component={<Landing />} />} />
       <Route path="/register" element={<Register />} />
@@ -22,9 +26,26 @@ function AllRoutes() {
         path="/update-info"
         element={<LayoutLogin component={<SettingAccount />} />}
       />
-      <Route
+      {/* <Route
         path="/services"
         element={<LayoutLogin component={<Services />} />}
+      /> */}
+      <Route
+        path="/used-services"
+        element={<LayoutLogin component={<UsedService />} />}
+      />
+      {/* <Route
+        path="/detail-service"
+        element={<LayoutLogin component={<ServiceDetail />} />}
+      /> */}
+      <Route
+        path="/services"
+        exact
+        element={<LayoutLogin component={<Services />} />}
+      />
+      <Route
+        path="/services/:id"
+        element={<LayoutLogin component={<ServiceDetail />} />}
       />
     </Routes>
   );

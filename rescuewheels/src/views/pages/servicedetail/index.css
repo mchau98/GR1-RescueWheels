@@ -1,0 +1,32 @@
+.service-detail-container {
+  padding: 20px;
+}
+
+.service-detail-box {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-detail-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.service-detail-info {
+  flex: 1;
+}
+
+.service-org-info {
+  margin-left: 20px;
+}
+
+.service-reviews {
+  margin-top: 20px;
+}

@@ -43,7 +43,7 @@ function Home() {
         <img
           src={poster}
           alt="posters"
-          style={{ width: "1440px", height: "544px" }}
+          style={{ width: "1440px", height: "300px" }}
         />
       </div>
       <div className="home-introduce">
